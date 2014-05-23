@@ -9,6 +9,7 @@
   <url>http://maven.apache.org</url>
   <properties>
  	<spring.version>4.0.1.RELEASE</spring.version>
+ 	<spring.security.version>3.2.4.RELEASE</spring.security.version>
  	<tiles-version>3.0.4</tiles-version>
  	</properties>
   <dependencies>
@@ -19,6 +20,7 @@
       <scope>test</scope>
     </dependency>
   <!-- Spring dependencies -->
+   
  <dependency>
  <groupId>org.springframework</groupId>
  <artifactId>spring-core</artifactId>
@@ -37,12 +39,51 @@
  <version>${spring.version}</version>
  </dependency>
  
+  <!-- Spring Security dependencies -->
+ 
+   <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+ 
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>
+	
+    
+    <dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-ldap</artifactId>
+    <version>3.2.3.RELEASE</version>
+</dependency>
+
+ 
+  <!-- Apache Tiles dependencies -->
+  
  <dependency>
     <groupId>org.apache.tiles</groupId>
     <artifactId>tiles-extras</artifactId>
     <version>${tiles-version}</version>
 </dependency>
+
+
+ <!-- JSTL dependencies -->
  
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>jstl</artifactId>
+	<version>1.2</version>
+</dependency>
+            
+  <!-- log4j -->
+ <dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.9</version>
+</dependency>
  </dependencies>
  <build>
  <finalName>SLIM</finalName>
